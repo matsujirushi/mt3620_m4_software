@@ -1,4 +1,4 @@
-{
+﻿{
   "environments": [
     {
       "environment": "AzureSphere",
@@ -10,27 +10,17 @@
       "name": "ARM-Debug",
       "generator": "Ninja",
       "configurationType": "Debug",
-      "inheritEnvironments": [
-        "AzureSphere"
-      ],
+      "inheritEnvironments": [ "AzureSphere" ],
       "buildRoot": "${projectDir}\\out\\${name}",
       "installRoot": "${projectDir}\\install\\${name}",
-      //"cmakeToolchain": "${projectDir}\\AzureSphereRTCoreToolchainMTK.cmake",
       "cmakeToolchain": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\AzureSphereRTCoreToolchain.cmake",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": "",
       "variables": [
         {
-          "name": "AZURE_SPHERE_TARGET_API_SET",
-          "value": "latest-beta"
-        },
-        {
           "name": "ARM_GNU_PATH",
-          "value": "${env.DefaultArmToolsetPath}"
-        },
-        {
-          "name": "AZURE_SPHERE_DEFAULT_CMAKE_PATH",
-          "value": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\"
+          "value": "${env.DefaultArmToolsetPath}",
+          "type": "STRING"
         }
       ]
     },
@@ -38,27 +28,17 @@
       "name": "ARM-Release",
       "generator": "Ninja",
       "configurationType": "Release",
-      "inheritEnvironments": [
-        "AzureSphere"
-      ],
+      "inheritEnvironments": [ "AzureSphere" ],
       "buildRoot": "${projectDir}\\out\\${name}",
       "installRoot": "${projectDir}\\install\\${name}",
-      //"cmakeToolchain": "${projectDir}\\AzureSphereRTCoreToolchainMTK.cmake",
       "cmakeToolchain": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\AzureSphereRTCoreToolchain.cmake",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": "",
       "variables": [
         {
-          "name": "AZURE_SPHERE_TARGET_API_SET",
-          "value": "latest-beta"
-        },
-        {
           "name": "ARM_GNU_PATH",
-          "value": "${env.DefaultArmToolsetPath}"
-        },
-        {
-          "name": "AZURE_SPHERE_DEFAULT_CMAKE_PATH",
-          "value": "${env.AzureSphereDefaultSDKDir}CMakeFiles\\"
+          "value": "${env.DefaultArmToolsetPath}",
+          "type": "STRING"
         }
       ]
     }
